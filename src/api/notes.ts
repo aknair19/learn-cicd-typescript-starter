@@ -16,12 +16,12 @@ export async function handlerNotesGet(req: Request, res: Response, user: User) {
 export async function handlerNotesCreate(
   req: Request,
   res: Response,
-  user: User,
+  user: User
 ) {
   try {
     const { note } = req.body;
     const noteId = uuidv4();
-
+    console.log("hello World");
     await createNote({
       id: noteId,
       createdAt: new Date().toISOString(),
